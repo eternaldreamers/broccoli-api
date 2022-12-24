@@ -1,4 +1,4 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, PartialType } from '@nestjs/swagger';
 import {
   IsEmail,
   IsNotEmpty,
@@ -36,3 +36,5 @@ export class CreateUserDto {
   @ApiProperty()
   picture: string;
 }
+
+export class UpdateUserDto extends PartialType(CreateUserDto) {}
