@@ -2,6 +2,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { GoogleModule } from './auth/google.module';
 import { PlatformModule } from './platform/platform.module';
 import { ProblemTopicModule } from './problem-topic/problem-topic.module';
 import { ProblemModule } from './problem/problem.module';
@@ -40,6 +41,7 @@ import { UserModule } from './user/user.module';
     StateModule,
     UserProblemModule,
     ProblemTopicModule,
+    GoogleModule,
   ],
 })
 export class AppModule {}
